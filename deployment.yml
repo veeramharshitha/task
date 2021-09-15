@@ -1,0 +1,16 @@
+apiVersion: apps/v1beta1
+kind: Deployment
+metadata:
+  name: my-java-deployment
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: my-java
+    spec:
+      containers:
+      - name: my-java-container1
+        image: image1:1.0
+        ports:
+        - containerPort: 80
